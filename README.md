@@ -10,16 +10,49 @@ The algorithm is inspired by how the simple perceptron works, that is, it is the
 # How to use
 By default the filter brings a list of banned words as an example, it also brings a dataset which is used to calibrate the algorithm to our needs.
 
-To quickly use the algorithm, you only have to use the "Word_Filter.train(dataset, black_list, epochs)" method, this to adjust the filter and already to be able to filter text just use the "Word_Filter.filter_text(text, black_list)" method.
+To quickly use the algorithm, you only have to use the **"Word_Filter.train(dataset, black_list, epochs)"** method, this to adjust the filter and already to be able to filter text just use the **"Word_Filter.filter_text(text, black_list)"** method.
 ```python
 Word_Filter.train(dataset, black_list, 100)
 print(Word_Filter.filter_text("Insert your text with banned words here.", black_list))
 ```
 
-If what you want is to quickly test how accurate the algorithm is, you can use the Word_Filter.test () method, this will return a score of how accurate it was and also print which words I censor and which do not.
+If what you want is to quickly test how accurate the algorithm is, you can use the **"Word_Filter.test(dataset, black_list)"** method, this will return a score of how accurate it was and also print which words I censor and which do not.
 ```python
 Word_Filter.test(dataset, black_list)
 ```
+If what you are looking for is not to directly censor a word, you can choose to use the function **"Word_Filter.predict(word, black_list)"**, this will do it to return true or false according to whether or not the word is one of the searched.
+```python
+Word_Filter.predict("Your word here", black_list)
+```
+When creating a dataset, the only thing we must do is put words that are written very similar to those prohibited or derived from the prohibited word and mark it 1 or 0 depending on whether it is banned or not.
+
+* **black_list.json example file**
+```json
+{
+  "words" : [
+    "banana",
+    "shit",
+    "man"
+  ]
+}
+```
+
+* **dataset.json example file**
+```json
+{
+  "pairs" : [
+    ["bananas", 1],
+    ["bananasplit", 1]
+    ["apple", 0],
+    ["shitter", 1],
+    ["this", 0],
+    ["hits", 0],
+    ["woman", 1],
+    ["man", 0]
+  ]
+}
+```
+> *Note: Depending on how good your dataset is compared to the list of prohibited words, it will show more or less performance. Marking words very different from those in the list as prohibited in the dataset could cause performance problems.*
 
 # Technical information
 It works by using metrics that analize gramaticaly two words.
