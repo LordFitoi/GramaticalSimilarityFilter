@@ -38,14 +38,14 @@ to compare if 2 words are definitely the same, like this;
 In this algorithm is a mathematical function that is used to control the behavior of the analysis in the metric. Different functions exert different properties and performance within the algorithm. What I will put next are the different evaluation functions that I test and their behavior within the filter.
 
 * **Cuadratic Evaluation:** f(x) = x^2, It makes the relationship between two groups easily distinguishable.
-![alt text](https://github.com/LordFitoi/GramaticalSimilarityFilter/blob/master/GSF_images/cuadratic_evaluation.PNG)
+* ![alt text](https://github.com/LordFitoi/GramaticalSimilarityFilter/blob/master/GSF_images/cuadratic_evaluation.PNG)
 
 * **Square Root Evaluation:** f(x) = sqrt(x), It makes the relationship between two groups easily alike. It is usually more unstable when two groups are very different.
-![alt text](https://github.com/LordFitoi/GramaticalSimilarityFilter/blob/master/GSF_images/square_root_evaluation.PNG)
+* ![alt text](https://github.com/LordFitoi/GramaticalSimilarityFilter/blob/master/GSF_images/square_root_evaluation.PNG)
 
 * **Logaritmic Evaluation:** f(x) = log10(x + 1), Similar to the square root evaluation with the difference that it does not present instability when two groups are completely different. 
 
-![alt text](https://github.com/LordFitoi/GramaticalSimilarityFilter/blob/master/GSF_images/logaritmic_evaluation.PNG)
+* ![alt text](https://github.com/LordFitoi/GramaticalSimilarityFilter/blob/master/GSF_images/logaritmic_evaluation.PNG)
 
 > **Note: We can put manually the bias value, but i recomment to use optimization techniquies, because performance is strongly
 affected by this factor, a very high bias would make the words have to be exactly the same for them to be filtered, and
