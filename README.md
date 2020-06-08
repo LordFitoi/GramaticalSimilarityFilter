@@ -28,7 +28,7 @@ It works by using metrics that analize gramaticaly two words.
 Being A & B = the letter secuence of their respective words example;
 if the word is apple, **A = {(a, p), (p, p), (p, l), (l, e)}**
 
-* f(x) = x^2 > **#This is an evaluation function.
+* f(x) = x^2 > **#This is an evaluation function.**
 * metric_1 = f(AnB) / f(AuB) **#This is the common secuence metric.**
 
 2) The second one analize if two words have similar shape, the formulas are:
