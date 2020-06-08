@@ -13,28 +13,28 @@ but with different meanings better. To indicate that it is a banned word just pu
 # Technical information
 It works by using metrics that analize gramaticaly two words.
 
--The first metric analize if two words have similar letter secuence, the formulas are:
+1) The first metric analize if two words have similar letter secuence, the formulas are:
 Being A & B = the letter secuence of their respective words example;
 if the word is apple, A = {(a, p), (p, p), (p, l), (l, e)}
 
-f(x) = x^2 # This is an evaluation function, you can change it for other function depending on your purpose, of course.
-metric_1 = f(AnB) / f(AuB) # This is the common secuence metric
+* f(x) = x^2 > **#This is an evaluation function.
+* metric_1 = f(AnB) / f(AuB) **#This is the common secuence metric.**
 
--The second one analize if two words have similar shape, the formulas are:
+2) The second one analize if two words have similar shape, the formulas are:
 Being A & B = the two respective words
 
-f(x) = sqrt(x) # This is another evalution function.
-metric_2 = f(min(A, B)) / f(max(A, B)) # This is the shape metric
+* f(x) = sqrt(x) **#This is another evalution function.**
+* metric_2 = f(min(A, B)) / f(max(A, B)) **#This is the shape metric.**
 
--Finally we get the output by taking the average of the metrics;
-output = (metric_1 + metric_2) / 2
+3) Finally we get the output by taking the average of the metrics;
+* output = (metric_1 + metric_2) / 2
 
--Affter getting the output we will use a number that we will call bias, its function will be uniquely and exclusively
+4) Affter getting the output we will use a number that we will call bias, its function will be uniquely and exclusively
 to compare if 2 words are definitely the same, like this;
 
-Are similar <-> output >= bias
+* Are similar <-> output >= bias
 
--We can put manually the bias value, but i recomment to use optimization techniquies, because performance is strongly
+> **Note: We can put manually the bias value, but i recomment to use optimization techniquies, because performance is strongly
 affected by this factor, a very high bias would make the words have to be exactly the same for them to be filtered, and
 a very low bias would make all the words be filtered, therefore it is important to find the balance where All or most
-of the words are filtered correctly.
+of the words are filtered correctly.**
