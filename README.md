@@ -67,7 +67,7 @@ if the word is apple, **A = {(a, p), (p, p), (p, l), (l, e)}**
 2) The second one analize if two words have similar shape, the formulas are:
 Being A & B = the two respective words length.
 
-* f(x) = sqrt(x) **#This is another evalution function.**
+* f(x) = sqrt(x) **#This is another evaluation function.**
 * metric_2 = f(min(A, B)) / f(max(A, B)) **#This is the shape metric.**
 
 3) Finally we get the output by taking the average of the metrics;
