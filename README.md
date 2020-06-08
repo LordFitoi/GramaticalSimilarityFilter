@@ -58,14 +58,14 @@ When creating a dataset, the only thing we must do is put words that are written
 It works by using metrics that analize gramaticaly two words.
 
 1) The first metric analize if two words have similar letter secuence, the formulas are:
-Being A & B = the letter secuence of their respective words example;
+Being A & B = the letter secuence of their respective words, example;
 if the word is apple, **A = {(a, p), (p, p), (p, l), (l, e)}**
 
 * f(x) = x^2 > **#This is an evaluation function.**
 * metric_1 = f(AnB) / f(AuB) **#This is the common secuence metric.**
 
 2) The second one analize if two words have similar shape, the formulas are:
-Being A & B = the two respective words
+Being A & B = the two respective words length.
 
 * f(x) = sqrt(x) **#This is another evalution function.**
 * metric_2 = f(min(A, B)) / f(max(A, B)) **#This is the shape metric.**
