@@ -15,7 +15,7 @@ It works by using metrics that analize gramaticaly two words.
 
 1) The first metric analize if two words have similar letter secuence, the formulas are:
 Being A & B = the letter secuence of their respective words example;
-if the word is apple, A = {(a, p), (p, p), (p, l), (l, e)}
+if the word is apple, **A = {(a, p), (p, p), (p, l), (l, e)}**
 
 * f(x) = x^2 > **#This is an evaluation function.
 * metric_1 = f(AnB) / f(AuB) **#This is the common secuence metric.**
@@ -33,6 +33,11 @@ Being A & B = the two respective words
 to compare if 2 words are definitely the same, like this;
 
 * Are similar <-> output >= bias
+
+Glosary:
+
+- **Evaluation function:** It is a mathematical function which serves to control the behavior of the analysis in the metric.
+
 
 > **Note: We can put manually the bias value, but i recomment to use optimization techniquies, because performance is strongly
 affected by this factor, a very high bias would make the words have to be exactly the same for them to be filtered, and
