@@ -1,5 +1,7 @@
 # GramaticalSimilarityFilter
-This is a free-use text filter, it filters the words according to how similar the words are with the forbidden words. The objective of this algorithm is to detect and filter those unwanted words even if they are not written explicitly. That is, words with symbols in between, or with letters replacing others or even with numbers replacing letters, will be detected and filtered by the algorithm. Ex: Banana, B4n4n4, Ba-na-na, Vanana.
+This is a free-use text filter, it filters the words according to how similar the words are with the forbidden words. The objective of this algorithm is to detect and filter those unwanted words even if they are not written explicitly. That is, words with symbols in between, or with letters replacing others or even with numbers replacing letters, will be detected and filtered by the algorithm. 
+
+* **Examples:** Banana, B4n4n4, Ba-na-na, Vanana.
 
 The algorithm is inspired by how the simple perceptron works, that is, it is the algorithm itself that will be adjusted to give the best performance based on the test data that is shown.
 
