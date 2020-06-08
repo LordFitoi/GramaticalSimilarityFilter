@@ -34,9 +34,10 @@ to compare if 2 words are definitely the same, like this;
 
 * Are similar <-> output >= bias
 
-Glosary:
+# Evaluation Functions
+It is a mathematical function which serves to control the behavior of the analysis in the metric.
 
-- **Evaluation function:** It is a mathematical function which serves to control the behavior of the analysis in the metric.
+* **Cuadratic Evaluation:** f(x) = x^2, It makes the relationship between two groups easily distinguishable.
 
 
 > **Note: We can put manually the bias value, but i recomment to use optimization techniquies, because performance is strongly
