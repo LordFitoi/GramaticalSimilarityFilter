@@ -12,19 +12,14 @@ It works by using metrics that analize gramaticaly two words.
 
 -The first metric analize if two words have similar letter secuence, the formulas are:
 
-Being A & B = the letter secuence of their respective words
-example; if the word is apple, A = {(a, p), (p, p), (p, l), (l, e)}
-
+Being A & B = the letter secuence of their respective words example; if the word is apple, A = {(a, p), (p, p), (p, l), (l, e)}
 f(x) = x^2 # This is an evaluation function, you can change it for other function depending on your purpose, of course
-
 metric_1 = f(AnB) / f(AuB) # This is the common secuence metric
 
 -The second one analize if two words have similar shape, the formulas are:
 
 Being A & B = the two respective words
-
 f(x) = sqrt(x) # This is another evalution function.
-
 metric_2 = f(min(A, B)) / f(max(A, B)) # This is the shape metric
 
 -Finally we get the output by taking the average of the metrics;
