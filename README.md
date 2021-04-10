@@ -7,6 +7,9 @@ The algorithm is inspired by how the simple perceptron works, that is, it is the
 
 > *Note: The parameter that will define whether or not a word passes the filter is bias.*
 
+# Update: GramaticalSimilarityFilter v2
+This is an special version of the algorithm, this version solve the performance of the last version, changing it from O(n^2) to O(n). Likewise, it simplifies the code, giving a performance similar to the previous version without having to use the evaluation functions already mentioned.
+
 # How to use
 By default the filter brings a list of banned words as an example, it also brings a dataset which is used to calibrate the algorithm to our needs.
 
