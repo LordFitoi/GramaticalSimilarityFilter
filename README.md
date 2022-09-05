@@ -82,17 +82,3 @@ to compare if 2 words are definitely the same, like this;
 * Are similar <-> output >= bias
 
 > *Note: The bias can be defined manually, the problem is that the recommended bias to obtain the best performance varies according to the training data and the list of banned words that we give it, so we have chosen to use optimization techniques. In other words, the bias adjusts itself based on the error obtained during training.*
-
-# Evaluation Functions
-In this algorithm is a mathematical function that is used to control the behavior of the analysis in the metric. Different functions exert different properties and performance within the algorithm. What I will put next are the different evaluation functions that I test and their behavior within the filter.
-
-* **Cuadratic Evaluation:** f(x) = x^2, It makes the relationship between two groups easily distinguishable.
-* ![alt text](https://github.com/LordFitoi/GramaticalSimilarityFilter/blob/master/GSF_images/cuadratic_evaluation.PNG)
-
-* **Square Root Evaluation:** f(x) = sqrt(x), It makes the relationship between two groups easily alike. It is usually more unstable when two groups are very different.
-* ![alt text](https://github.com/LordFitoi/GramaticalSimilarityFilter/blob/master/GSF_images/square_root_evaluation.PNG)
-
-* **Logaritmic Evaluation:** f(x) = log10(x + 1), Similar to the square root evaluation with the difference that it does not present instability when two groups are completely different. 
-
-* ![alt text](https://github.com/LordFitoi/GramaticalSimilarityFilter/blob/master/GSF_images/logaritmic_evaluation.PNG)
-
